@@ -34,6 +34,7 @@ minima:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:
+  - tags.md
 
 # Build settings
 theme: minima
@@ -45,7 +46,6 @@ plugins:
  - jekyll-mentions
  - jekyll-gist
  - jekyll-sitemap
- 
 
 jekyll-mentions:
   base_url: https://twitter.com

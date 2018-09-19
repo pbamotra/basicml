@@ -4,3 +4,5 @@ Gemfile.lock
 _site
 *.gem
 .DS_Store
+.ruby-version
+tag
