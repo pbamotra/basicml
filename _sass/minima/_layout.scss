@@ -1,6 +1,16 @@
 /**
  * Site header
  */
+ .site-twist {
+  font-size: 14px;
+  transform: rotate(-90deg);
+  letter-spacing: 0.1em;
+  float: left;
+  margin-top: 1em;
+  margin-left: -0.7em;
+  color:#DCDCDC;
+ }
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;

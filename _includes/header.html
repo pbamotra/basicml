@@ -4,14 +4,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: nil -%}
     <!-- <h1> -->
-    <span style="
-      font-size: 14px;
-      transform: rotate(-90deg);
-      letter-spacing: 0.1em;
-      float: left;
-      margin-top: 1em;
-      margin-left: -0.7em;
-      color:#DCDCDC">Not</span>
+    <span class="site-twist">{{ site.twist }}</span>
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
     {%- if page_paths -%}
       <nav class="site-nav">
