@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Some articles are just so short that we have to make the footer stick"
+title: "Dark art optimization tips that work"
 categories: 
-    - nlp
+    - optim
 tags: techniques best-practices
 ---
 
