@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Optimization tips that work"
+title: "Optimization tricks that work - Part I"
 categories: 
     - optim
 tags: techniques best-practices deep-learning
