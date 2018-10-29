@@ -50,10 +50,14 @@ plugins:
  - jekyll-mentions
  - jekyll-gist
  - jekyll-sitemap
+ - jekyll-paginate
 
 jekyll-mentions:
   base_url: https://twitter.com
 
 scholar:
   style: mla
+
+paginate: 5
+paginate_path: "/page/:num/"
   
