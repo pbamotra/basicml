@@ -1,7 +1,7 @@
 title: Basic Machine Learning
 twist: Not
 url: https://basicml.com
-resume: https://pnksh.me
+resume: mailto:pankesh.bamotra@gmail.com
 author: Pankesh Bamotra
 email:
 profession: Machine learning engineer
@@ -51,6 +51,9 @@ plugins:
  - jekyll-gist
  - jekyll-sitemap
  - jekyll-paginate
+ - jekyll-inline-svg
+
+markdown: kramdown
 
 jekyll-mentions:
   base_url: https://twitter.com
@@ -60,4 +63,7 @@ scholar:
 
 paginate: 5
 paginate_path: "/page/:num/"
+
+svg:
+  optimize: true
   
