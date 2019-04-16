@@ -223,3 +223,7 @@ for i, it in enumerate(dali_iter):
 I'm yet to benchmark DALI in my code and will update this post once I've the results. 
 
 Stay classy.
+
+#### Links:
+ - DALI Github [repo](https://github.com/NVIDIA/DALI)
+ - Official [blog post](https://devblogs.nvidia.com/fast-ai-data-preprocessing-with-nvidia-dali/) on DALI
