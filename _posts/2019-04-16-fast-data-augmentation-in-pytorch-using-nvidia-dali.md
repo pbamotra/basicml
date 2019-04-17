@@ -4,6 +4,9 @@ title: "Fast data augmentation in Pytorch using Nvidia DALI"
 categories: 
     - performance
 tags: pytorch augmentation gpu-processing nvidia DALI
+cover_art: url(/assets/imgs/absurd/07.png) no-repeat right
+cover_art_size: 100%
+cover_attribution: absurd.design
 ---
 In my new project at work I had to process a sufficiently large set of image data for a multi-label multi-class classification task. Despite the GPU utilization being close to 100%, a single training epoch over 2 million images took close to 3.5 hrs to run. This is a big issue if you're running your baseline experiments and want quick results. I first thought that since I was processing original size images each of which were at least a few MBs the bottleneck was disk I/O. I used [Imagemagick mogrify](https://imagemagick.org/script/mogrify.php){:target="_blank"} to resize all 2 million images which took a long time. To my astonishment resizing images didn't reduce the training time at all! Well, not noticeably. So, I went through the code and found out that the major bottleneck were the image augmentation operations in Pytorch. 
 

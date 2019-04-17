@@ -25,7 +25,10 @@ layout: default
     {{ content }}
   </div>
   {% include sharebuttons.html %}
-
+  {%- if page.cover_art -%}
+    <br/>
+    <span style="font-size: x-small">Cover: {{ page.cover_attribution }}</span>
+  {%- endif -%}
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
