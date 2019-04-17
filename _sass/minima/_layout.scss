@@ -272,4 +272,13 @@
     margin-left: 1.5rem;
     position: absolute;
   }
+  .attribution {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .attribution {
+    display: none;
+  }
 }
