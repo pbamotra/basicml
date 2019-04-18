@@ -3,7 +3,7 @@ layout: post
 title: Expectation Maximization distilled to basics
 categories: 
     - basics
-tags: machine-learning, expectation-maximization, latent-models
+tags: machine-learning expectation-maximization latent-models
 cover_art: url(/assets/imgs/icons8/flamenco/flamenco-searching.png) no-repeat right
 cover_art_size: 100%
 cover_attribution: icons8.com/ouch
@@ -181,15 +181,11 @@ Now let's define our EM steps for this problem: -
     \begin{aligned}
         \frac{\partial Q}{\partial \theta_A} 
         &= \sum_{j} \Big( \frac{P_{j} \text{ } h_j}{\theta_A} - \frac{P_{j} (10-h_j)}{(1 - \theta_A)} \Big)
-        &= 0
-    \end{aligned}
-    $$
-    
-    $$
-    \begin{aligned}
+        = 0
+        \\\
         \frac{\partial Q}{\partial \theta_B} 
         &= \sum_{j} \Big( \frac{(1-P_{j}) \text{ } h_j}{\theta_B} - \frac{(1-P_{j}) (10-h_j)}{(1 - \theta_B)} \Big)
-        &= 0
+        = 0
     \end{aligned}
     $$
     
@@ -197,28 +193,31 @@ Now let's define our EM steps for this problem: -
     
     $$
     \begin{aligned}
-        \theta^{(m+1)}_{A} &= \frac{1}{10}\frac{\sum_{j} P_{j} h_j}{\sum_{j} P_{j}} && \text{\tt{[eq. 1]}}\\\
-        \theta^{(m+1)}_{B} &= \frac{1}{10}\frac{\sum_{j} (1 - P_{j}) h_j}{\sum_{j} (1 - P_{j})} && \text{\tt{[eq. 2]}}
+        \theta^{(m+1)}_{A} &= \frac{1}{10}\frac{\sum_{j} P_{j} h_j}{\sum_{j} P_{j}} && \text{[eq. 1]}\\\
+        \theta^{(m+1)}_{B} &= \frac{1}{10}\frac{\sum_{j} (1 - P_{j}) h_j}{\sum_{j} (1 - P_{j})} && \text{[eq. 2]}
     \end{aligned}
     $$
     </li>
     <li>Let's solve our original problem now that we have all the pieces. <br/>
-    \( h_j = [5, 9, 8, 4, 7] \)<br/>
-    \( \theta^{(0)} = (0.6, 0.5) \) <br/>
-    <br/>
-    \( P_{1} = \frac{(0.6)^{5} (0.4)^{5}}{(0.6)^{5} (0.4)^{5} + (0.5)^{5} (0.5)^{5}} \approx 0.45 \) <br/>
-    \( P_{j} = [0.45, 0.80, 0.73, 0.35, 0.65] \) <br/>
-    \( \sum_{j} P_{j} = 2.98 \) <br/>
-    <br/>
-    \( 1 - P_{j} = [1-0.45, 1-0.80, 1-0.73, 1-0.35, 1-0.65] \) <br/>
-    \( \sum_{j} (1 - P_{j}) = 5 - 2.98 = 2.02 \) <br/>
-    <br/>
-    \( h_j P_{j} = [5*0.45, 9*0.80, 8*0.73, 4*0.35, 7*0.65] \) <br/>
-    \( h_j (1 - P_{j}) = [5*0.55, 9*0.20, 8*0.27, 4*0.65, 7*0.35] \) <br/>
-    <br/>
-    \( \sum_{j} h_j P_{j} = 21.24 \) <br/>
-    \( \sum_{j} h_j (1 - P_{j}) = 11.76 \) <br/>
-    <br/>
+    $$
+    \begin{aligned}
+        & h_j = [5, 9, 8, 4, 7]\\\
+        & \theta^{(0)} = (0.6, 0.5)\\\
+        & \\\
+        & P_{1} = \frac{(0.6)^{5} (0.4)^{5}}{(0.6)^{5} (0.4)^{5} + (0.5)^{5} (0.5)^{5}} \approx 0.45 \\\
+        & P_{j} = [0.45, 0.80, 0.73, 0.35, 0.65] \\\
+        & \sum_{j} P_{j} = 2.98 \\\
+        & \\\
+        & 1 - P_{j} = [1-0.45, 1-0.80, 1-0.73, 1-0.35, 1-0.65] \\\
+        & \sum_{j} (1 - P_{j}) = 5 - 2.98 = 2.02 \\\
+        & \\\
+        & h_j P_{j} = [5*0.45, 9*0.80, 8*0.73, 4*0.35, 7*0.65] \\\
+        & h_j (1 - P_{j}) = [5*0.55, 9*0.20, 8*0.27, 4*0.65, 7*0.35] \\\
+        & \\\
+        & \sum_{j} h_j P_{j} = 21.24 \\\
+        & \sum_{j} h_j (1 - P_{j}) = 11.76
+    \end{aligned}
+    $$
     Substituting into eq. 1 and eq. 2, we get <br/>
     \( \theta^{(1)}_{A} = 0.71 \text{ and } \theta^{(1)}_{B} = 0.58 \).<br/>
     After 10 iterations, the algorithm will converge to \( \theta^{(1)}_{A} = 0.80 \text{ and } \theta^{(1)}_{B} = 0.52 \).
