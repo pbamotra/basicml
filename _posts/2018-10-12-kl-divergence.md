@@ -78,7 +78,7 @@ Let's revisit the discussion on why we require P to be <i>absolute continuous</i
 
 ### Treading to machine learning domain
 
-In most of the ML algorithms, we resort to optimising cross entropy and not KL divergence because the Shannon entropy term is independent of the model parameters and acts like a constant when taking derivative of \log-likelihood. In fact, it can be shown that minimizing KL divergence is equivalent to minimizing negative \log-likelihood.
+In most of the ML algorithms, we resort to optimising cross entropy and not KL divergence because the Shannon entropy term is independent of the model parameters and acts like a constant when taking derivative of log-likelihood. In fact, it can be shown that minimizing KL divergence is equivalent to minimizing negative log-likelihood.
 
 <p>
 Let \( p\left(x \vert \theta^{*}\right) \) be the true data distribution and model distribution be  \( p\left(x \vert \theta \right) \). Then by definition of KL divergence,
@@ -95,7 +95,7 @@ D_{KL}[p(x \vert \theta^*) \, \Vert \, p(x \vert \theta)] &= \mathbb{E}_{x \sim 
 </p>
 
 <p>
-For a large number of samples drawn from the true distribution we have \( \frac{1}{N} \sum_x \log \, p(x \vert \theta) = \mathbb{E}_{x \sim p(x \vert \theta^*)}\left[\log \, p(x \vert \theta) \right] \) using the law of large numbers. Left-hand side in the equation represents \log-likelihood of data samples. Comparing this result with the derivation above we can conclude that minimizing KL divergence is equivalent to minimizing negative \log-likelihood.
+For a large number of samples drawn from the true distribution we have \( \frac{1}{N} \sum_x \log \, p(x \vert \theta) = \mathbb{E}_{x \sim p(x \vert \theta^*)}\left[\log \, p(x \vert \theta) \right] \) using the law of large numbers. Left-hand side in the equation represents log-likelihood of data samples. Comparing this result with the derivation above we can conclude that minimizing KL divergence is equivalent to minimizing negative log-likelihood.
 </p>
 
 These results have been used in variational inference theory and the most recent examples are Variational Autoencoders. The discussion about VAEs is reserved for another post. But you can read about them in this [Tutorial on Variational Autoencoders](https://arxiv.org/pdf/1606.05908.pdf) by [Carl Doersch](http://www.carldoersch.com/).

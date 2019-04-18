@@ -28,18 +28,17 @@ Given the observed data \( \mathcal{y} \) with density \( P ( y \vert \theta ) \
 </p>
 
 <p>
-However, in the case of EM, we have a concept of complete data, \( \mathrm{X} \). This complete data is not observed directly. The only observed data is \( \mathrm{y} \) represented by random variable \( \mathrm{Y} \) which depends on \( \mathrm{X} \). E.g. Y can represent the mean of X or Y could be the first component of vector \( \mathrm{X} \). In EM, we try to find the <i>expected \log-likelihood</i> of this complete data \( \mathrm{X} \). 
+However, in the case of EM, we have a concept of complete data, \( \mathrm{X} \). This complete data is not observed directly. The only observed data is \( \mathrm{y} \) represented by random variable \( \mathrm{Y} \) which depends on \( \mathrm{X} \). E.g. Y can represent the mean of X or Y could be the first component of vector \( \mathrm{X} \). In EM, we try to find the <i>expected log-likelihood</i> of this complete data \( \mathrm{X} \). 
 </p> 
 
 <br/>
 EM algorithm can be summarized in following five steps[^1] :-
 <br/>
-<br/>
 
 <ol>
     <li>Let m = 0 and make an initial estimate \( \theta^{( m )} \) for \( \theta \).</li>
     <li>Given the observed data y and pretending for the moment that your current guess \( \theta^{( m )} \) is correct, formulate the conditional probability distribution \( \mathcal{p(} \mathcal{x} \vert \mathcal{y}, \theta (m) ) \) for the complete data \( \mathcal{x} \).</li>
-    <li>Using the conditional probability distribution \( \mathcal{p(} \mathcal{x} \vert \mathcal{y}, \theta (m) ) \) calculated in the previous step, form the conditional expected \log-likelihood, called the Q-function.
+    <li>Using the conditional probability distribution \( \mathcal{p(} \mathcal{x} \vert \mathcal{y}, \theta (m) ) \) calculated in the previous step, form the conditional expected log-likelihood, called the Q-function.
         <p>
             \[
             \begin{aligned}
@@ -52,7 +51,7 @@ EM algorithm can be summarized in following five steps[^1] :-
     \( \mathcal{X} (y) \) denotes support of \( \mathrm{X} \), which is the set \( \{ {\mathcal{x} \vert \mathcal{p}(\mathcal{x} \vert \theta) > 0} \} \). Also, \( \mathcal{X} (y) \) does not depend on \( \theta \). If the support depends on \( \theta \) (e.g. unif(0, \( \theta) \)) then the monotonicity of the EM algorithm might not hold. We'll talk about monotonicity of EM soon.
     </li>
     <li>Find the \( \theta \) that maximizes the Q-function; the result is your new estimate \( \theta^{(m+1)} \).</li>
-    <li>Stop when the \( \vert \mathcal{l}( \theta^{(m+1)} ) - \mathcal{l} ( \theta^{(m)}) \vert \lt \epsilon \) where \( \mathcal{l} \) represents the \log likelihood and \( \epsilon \gt 0 \).</li>
+    <li>Stop when the \( \vert \mathcal{l}( \theta^{(m+1)} ) - \mathcal{l} ( \theta^{(m)}) \vert \lt \epsilon \) where \( \mathcal{l} \) represents the log-likelihood and \( \epsilon \gt 0 \).</li>
 </ol>
 
 ### EM coin toss example
@@ -70,7 +69,7 @@ Consider a simple coin-flipping experiment in which we are given a pair of coins
 <div class="svg-container">
     <figure class="caption">
         <img src="/assets/imgs/nature-em.svg" alt="EM coin toss example"/>
-        <figcaption>Source: Nature Biotechno\logy, Vol. 26 Page: 898</figcaption>
+        <figcaption>Source: Nature Biotechnology, Vol. 26 Page: 898</figcaption>
     </figure> 
 </div>
 
@@ -174,7 +173,7 @@ Now let's define our EM steps for this problem: -
         &  \hspace{1cm} + (1 - P_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Big] \\\
     \end{aligned}
     $$
-    Phew, that finishes defining our Q-function and the E-step. Here, E stands for finding conditional expected \log-likelihood or simply our Q-function. Also, I know I haven't the numerical calculation in our problem statement. But, hang on, everything will fall into places soon.
+    Phew, that finishes defining our Q-function and the E-step. Here, E stands for finding conditional expected log-likelihood or simply our Q-function. Also, I know I haven't the numerical calculation in our problem statement. But, hang on, everything will fall into places soon.
     </li>
     <li><b>M-step</b>: Let's maximize our Q-function w.r.t \( \theta_A \text{ and } \theta_B \).
     $$
@@ -234,21 +233,21 @@ Now let's define our EM steps for this problem: -
 with \( \mathcal{X} (y) \neq \emptyset, \theta \geq (\theta^{(m)}) \) if \( Q(\theta \vert \theta^{(m)}) \geq Q(\theta^{(m)} \vert \theta^{(m)}) \).
 
 </p>
-<b>Proof: </b> see [1](/b\log/expectation-maximization#fn1). <br/>
-<b>Geometric meaning: </b> The theorem states that improving Q-function at each step will not make the \log-likelihood worse.
+<b>Proof:</b> see <a href="#fn1">[1]</a>. <br/>
+<b>Geometric meaning: </b> The theorem states that improving Q-function at each step will not make the log-likelihood worse.
 
 #### Geometric intuition behing E-step and M-step
 <br/>
 <div class="svg-container">
     <figure class="caption">
         <img src="/assets/imgs/em.png" alt="EM monotonicity"/>
-        <figcaption>Inspired by: Sean Borman, EM Tutorial<sup><a href="/b\log/expectation-maximization#fn2">2</a></sup></figcaption>
+        <figcaption>Inspired by: Sean Borman, EM Tutorial<sup><a href="#fn2">2</a></sup></figcaption>
     </figure> 
 </div>
 <br/>
 
 <p>
-The expectation maximization algorithm during the E-step, choose the Q-function such that it lower bounds \( \log P(x; \theta) \) everywhere, and for which \( Q(\theta^{(m)} \vert \theta^{(m)}) \) = \(\log P(x; \theta^{(m)}) \). During the M-step, the algorithm moves to a new parameter set \( \theta^{(m+1)} \) that maximizes \( Q \). The proof for this can be found in <a href="/b\log/expectation-maximization#fn2">[2]</a>. In other words, EM tries to maximize the lower bound given by Q-function using co-ordinate ascent<sup><a href="/b\log/expectation-maximization#fn3">3</a></sup>.
+The expectation maximization algorithm during the E-step, choose the Q-function such that it lower bounds \( \log P(x; \theta) \) everywhere, and for which \( Q(\theta^{(m)} \vert \theta^{(m)}) \) = \(\log P(x; \theta^{(m)}) \). During the M-step, the algorithm moves to a new parameter set \( \theta^{(m+1)} \) that maximizes \( Q \). The proof for this can be found in <a href="#fn2">[2]</a>. In other words, EM tries to maximize the lower bound given by Q-function using co-ordinate ascent<sup><a href="#fn3">3</a></sup>.
 </p>
 
 <span style="display:none">[^2][^3][^4]</span>
