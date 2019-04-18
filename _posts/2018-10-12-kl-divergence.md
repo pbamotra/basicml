@@ -3,7 +3,7 @@ layout: post
 title: KL Divergence and its links to entropy
 categories: 
     - performance
-tags: machine-learning, statistics, information-theory
+tags: machine-learning statistics information-theory
 cover_art: url(/assets/imgs/kldivergence.jpg) no-repeat right
 cover_art_size: 100%
 cover_attribution: flickr.com/photos/shonk
