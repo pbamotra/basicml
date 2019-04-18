@@ -9,7 +9,7 @@ cover_art_size: 100%
 cover_attribution: icons8.com/ouch
 ---
 <p>
-This article is about the Expectation Maximization algorithm and the guarantees it offers for certain kind of optimization problems. We'll walk through the gory mathematical details and work out some examples that involve EM. In this article, we assume that you're familier with Maximum Likelihood estimation, if not, read my previous post - <a href="/b\log/mle-fisher/">MLE, Fisher information, and related theory</a>.
+This article is about the Expectation Maximization algorithm and the guarantees it offers for certain kind of optimization problems. We'll walk through the gory mathematical details and work out some examples that involve EM. In this article, we assume that you're familier with maximum likelihood estimation.
 </p>
 
 > The expectation maximization algorithm enables parameter estimation in probabilistic models with incomplete data.
