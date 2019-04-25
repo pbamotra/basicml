@@ -196,7 +196,7 @@ We are almost done and now we instantiate a `DALIGenericIterator` that helps us 
 {% highlight python %}
 from nvidia.dali.plugin.pytorch import DALIGenericIterator
 
-pipe = ExternalSourcePipeline(batch_size=16, num_threads=2, device_id=0)
+pipe = ExternalSourcePipeline(data_iterator=iterator, batch_size=16, num_threads=2, device_id=0)
 pipe.build()
 
 # first parameter is list of pipelines to run
