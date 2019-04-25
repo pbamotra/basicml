@@ -3,7 +3,7 @@ twist: Not
 url: https://www.basicml.com
 resume: mailto:pankesh.bamotra@gmail.com
 author: Pankesh Bamotra
-email:
+email: pankesh.bamotra@gmail.com
 google_analytics:
 
 profession: Research engineer 
@@ -37,11 +37,6 @@ show_excerpts: false # set to true to show excerpts on the homepage
 minima:
   date_format: "%b %-d, %Y"
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-header_pages:
-#  - tags.md
-
 # Build settings
 theme: minima
 
@@ -69,8 +64,10 @@ scholar:
 paginate: 5
 paginate_path: "/page/:num/"
 
-header_pages:
-  - about.md
-
 svg:
   optimize: true
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+  - about.md

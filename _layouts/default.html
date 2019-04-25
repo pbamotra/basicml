@@ -16,7 +16,9 @@ while True:
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="rows" style="background: {{ page.cover_art }}; background-size: {{ page.cover_art_size }}"></div>
+      {% if page.layout == 'post' %}
+        <div class="rows" style="background: {{ page.cover_art }}; background-size: {{ page.cover_art_size }}"></div>
+      {% endif %}
       <div class="wrapper">
         {{ content }}
       </div>
