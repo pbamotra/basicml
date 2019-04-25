@@ -4,7 +4,7 @@ title: "Fast data augmentation in Pytorch using Nvidia DALI"
 categories: 
     - performance
 tags: pytorch augmentation gpu-processing nvidia DALI
-cover_art: url(https://ucarecdn.com/79423e68-dc66-4b17-8465-5ad4794ee6d2/SurrealistLightbulbmin.gif) no-repeat right
+cover_art: url(https://ucarecdn.com/5bd9053a-127a-49a7-a722-3a22f40ec49b/ezgifcomgifmaker.gif) no-repeat right
 cover_art_size: 100%
 cover_attribution: absurd.design
 discussion_id: 2019-03-welcome

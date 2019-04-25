@@ -6,7 +6,7 @@ author: Pankesh Bamotra
 email:
 google_analytics:
 
-profession: Machine learning scientist
+profession: Research engineer 
 description: Throwing "whats" at machine learning
 keywords: machine learning, python, deep learning, computer vision, beginners, advanced, natural language processing, nlp, 深度 学习, 自然 语言 处理, pytorch, tensorflow, keras, artificial intelligence
 
@@ -68,6 +68,9 @@ scholar:
 
 paginate: 5
 paginate_path: "/page/:num/"
+
+header_pages:
+  - about.md
 
 svg:
   optimize: true
