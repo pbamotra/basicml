@@ -55,13 +55,13 @@ We saw that KL divergence is defined as \( D_{KL} \left(P  \Vert  Q\right) = \su
 </p>
 
 <p>
-\(
+$$
 \begin{aligned}
 D_{KL} \left(P  \Vert Q\right) &= \sum_{x} P(x) \log\Big(\frac{P(x)}{Q(x)}\Big) \\
 &= \sum_{x} P(x) \log(P(x)) - \sum_{x} P(x) \log(Q(x)) \\
 &= -H(X) + H(P, Q)
 \end{aligned}
-\)
+$$
 </p>
 
 <p>
@@ -85,13 +85,13 @@ Let \( p\left(x \vert \theta^{*}\right) \) be the true data distribution and mod
 </p>
 
 <p>
-\(
+$$
 \begin{aligned}
 D_{KL}[p(x \vert \theta^*) \, \Vert \, p(x \vert \theta)] &= \mathbb{E}_{x \sim p(x \vert \theta^*)}\left[\log \frac{p(x \vert \theta^*)}{p(x \vert \theta)} \right] \\
 &= \mathbb{E}_{x \sim p(x \vert \theta^*)}\left[\log \, p(x \vert \theta^*) - \log \, p(x \vert \theta) \right] \\
 &= H(X) - \mathbb{E}_{x \sim p(x \vert \theta^*)}\left[\log \, p(x \vert \theta) \right]
 \end{aligned}
-\)
+$$
 </p>
 
 <p>
