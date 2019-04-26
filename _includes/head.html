@@ -13,9 +13,6 @@
   <meta property="twitter:description" content="{{ site.description }}">
   <meta property="twitter:image" content="{{ "/assets/android-chrome-192x192.png" }}">
 
-  <link rel="stylesheet" media="all" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" as="style" onload="this.rel='stylesheet'">
-
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" }}">
@@ -25,6 +22,14 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="msvalidate.01" content="E93BDE3D16259DD0E534F24372E8E6BD" />
   <meta name="yandex-verification" content="f28d2510ee5bc673" />
+  <style type="text/css">
+    {% capture include_to_scssify %}
+      {% include main.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" as="style" onload="this.rel='stylesheet'">
+
   {%- feed_meta -%}
   {% if site.tags != "" %}
     {% include collecttags.html %}
