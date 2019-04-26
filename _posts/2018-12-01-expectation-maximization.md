@@ -22,9 +22,9 @@ Given the observed data \( \mathcal{y} \) with density \( P ( y \vert \theta ) \
 </p>
 
 <p>
-\[
-\hat{\theta}_{\text{mle}} = \text{arg max}_{\theta \in \Omega} \log \mathcal{p}(\mathcal{y}, \theta)
-\]
+$$
+    \hat{\theta}_{\text{mle}} = \text{arg max}_{\theta \in \Omega} \log \mathcal{p}(\mathcal{y}, \theta)
+$$
 </p>
 
 <p>
@@ -40,12 +40,12 @@ EM algorithm can be summarized in following five steps[^1] :-
     <li>Given the observed data y and pretending for the moment that your current guess \( \theta^{( m )} \) is correct, formulate the conditional probability distribution \( \mathcal{p(} \mathcal{x} \vert \mathcal{y}, \theta (m) ) \) for the complete data \( \mathcal{x} \).</li>
     <li>Using the conditional probability distribution \( \mathcal{p(} \mathcal{x} \vert \mathcal{y}, \theta (m) ) \) calculated in the previous step, form the conditional expected log-likelihood, called the Q-function.
         <p>
-            \[
+            $$
             \begin{aligned}
-            Q ( \theta | \theta ^ { ( m ) } ) &= \int _ { \mathcal{X} (y) } \operatorname{\log} p ( x | \theta ) p ( x | y ,\theta ^ { ( m ) } ) d x \\\
+            Q ( \theta | \theta ^ { ( m ) } ) &= \int _ { \mathcal{X} (y) } \operatorname{\log} p ( x | \theta ) p ( x | y ,\theta ^ { ( m ) } ) d x \\
             &= E _ { X | y ,\theta ( m ) } [ \operatorname{\log} p ( X | \theta ) ]
             \end{aligned}
-            \]
+            $$
         </p>
         
     \( \mathcal{X} (y) \) denotes support of \( \mathrm{X} \), which is the set \( \{ {\mathcal{x} \vert \mathcal{p}(\mathcal{x} \vert \theta) > 0} \} \). Also, \( \mathcal{X} (y) \) does not depend on \( \theta \). If the support depends on \( \theta \) (e.g. unif(0, \( \theta) \)) then the monotonicity of the EM algorithm might not hold. We'll talk about monotonicity of EM soon.
@@ -93,28 +93,28 @@ Now let's define our EM steps for this problem: -
     $$
     \begin{aligned}
         \mathcal{p(} \mathcal{y}, \mathcal{z} \vert \theta (m) ) 
-        &= \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta (m) && \text{[independence]} \\\
-        \log \mathcal{p(} \mathcal{y}, \mathcal{z} \vert \theta^{(m)} )) 
+        &= \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta (m) && \text{[independence]} \\
+        \log \mathcal{p(} \mathcal{y}, \mathcal{z} \vert \theta^{(m)} )) \\
         
-        &= \log \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta^{(m)}) && \text{[simplicity]} \\\
+        &= \log \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta^{(m)}) && \text{[simplicity]} \\
         
-        &= \sum_{j} \log \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta^{(m)}) \\\
+        &= \sum_{j} \log \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta^{(m)}) \\
         
-        &= \sum_{j} \log [ \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}}=1 \vert \theta^{(m)})^{z_j} \\\
-        & \hspace{1.5cm} \times \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}}=0 \vert \theta^{(m)})^{1 - z_{j}} ] \\\
+        &= \sum_{j} \log [ \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}}=1 \vert \theta^{(m)})^{z_j} \\
+        & \hspace{1.5cm} \times \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}}=0 \vert \theta^{(m)})^{1 - z_{j}} ] \\
         
-        &= \sum_{j} \log \Bigg[ \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{A}^{h_{j}} \text{ } (1 - \theta_{A})^{10 - h_{j}} \Big)^{z_{j}} \\\
-        &  \hspace{1.5cm} \times \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10 -h_{j}} \Big)^{1 - z_{j}} \Bigg] && \text{[$ h_{j} $ = #heads]} \\\
+        &= \sum_{j} \log \Bigg[ \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{A}^{h_{j}} \text{ } (1 - \theta_{A})^{10 - h_{j}} \Big)^{z_{j}} \\
+        &  \hspace{1.5cm} \times \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10 -h_{j}} \Big)^{1 - z_{j}} \Bigg] && \text{[$ h_{j} $ = \#heads]} \\
         
-        &= \sum_{j} \log \Bigg[ \Big( \mathcal{C} \text{ } \theta_{A}^{h_{j}} \text{ } (1 - \theta_{A})^{10-h_{j}} \Big)^{z_{j}} \\\
-        &  \hspace{1.5cm} \times \Big( \mathcal{C} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10-h_{j}} \Big)^{1 - z_{j}} \Bigg] \\\
+        &= \sum_{j} \log \Bigg[ \Big( \mathcal{C} \text{ } \theta_{A}^{h_{j}} \text{ } (1 - \theta_{A})^{10-h_{j}} \Big)^{z_{j}} \\
+        &  \hspace{1.5cm} \times \Big( \mathcal{C} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10-h_{j}} \Big)^{1 - z_{j}} \Bigg] \\
         
-        &= \sum_{j} \Bigg[ z_{j} \log \mathcal{C} \\\
-        &  \hspace{1cm} + z_{j} \text{ } h_{j} \log \theta_{A} \\\
-        &  \hspace{1cm} + z_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\\
-        &  \hspace{1cm} + (1 - z_{j}) \log \mathcal{C} \\\
-        &  \hspace{1cm} + (1 - z_{j}) \text{ } h_{j} \log \theta_{B} \\\
-        &  \hspace{1cm} + (1 - z_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B}) \Bigg] \\\
+        &= \sum_{j} \Bigg[ z_{j} \log \mathcal{C} \\
+        &  \hspace{1cm} + z_{j} \text{ } h_{j} \log \theta_{A} \\
+        &  \hspace{1cm} + z_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\
+        &  \hspace{1cm} + (1 - z_{j}) \log \mathcal{C} \\
+        &  \hspace{1cm} + (1 - z_{j}) \text{ } h_{j} \log \theta_{B} \\
+        &  \hspace{1cm} + (1 - z_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B}) \Bigg] \\
     \end{aligned}
     $$
     </li>
@@ -123,15 +123,15 @@ Now let's define our EM steps for this problem: -
     $$
     \begin{aligned}
         Q 
-        &= E _ { X | y ,\theta ( m ) } [ \operatorname{\log} p ( X | \theta ) ] \\\
-        &= E _ { Z | \theta ( m ) } [ \operatorname{\log} p ( X | \theta ) ] \\\
-        &= E _ { Z | \theta ( m ) } [ \operatorname{\log} p ( \mathcal{y}, \mathcal{z} | \theta ) ] \\\
-        &= E _ { Z | \theta ( m ) } \Bigg[ \sum_{j} [ z_{j} \log \mathcal{C} \\\
-        &  \hspace{1cm} + z_{j} \text{ } h_{j} \log \theta_{A} \\\
-        &  \hspace{1cm} + z_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\\
-        &  \hspace{1cm} + (1 - z_{j}) \log \mathcal{C} \\\
-        &  \hspace{1cm} + (1 - z_{j}) \text{ } h_{j} \log \theta_{B} \\\
-        &  \hspace{1cm} + (1 - z_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Bigg] \\\
+        &= E _ { X | y ,\theta ( m ) } [ \operatorname{\log} p ( X | \theta ) ] \\
+        &= E _ { Z | \theta ( m ) } [ \operatorname{\log} p ( X | \theta ) ] \\
+        &= E _ { Z | \theta ( m ) } [ \operatorname{\log} p ( \mathcal{y}, \mathcal{z} | \theta ) ] \\
+        &= E _ { Z | \theta ( m ) } \Bigg[ \sum_{j} [ z_{j} \log \mathcal{C} \\
+        &  \hspace{1cm} + z_{j} \text{ } h_{j} \log \theta_{A} \\
+        &  \hspace{1cm} + z_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\
+        &  \hspace{1cm} + (1 - z_{j}) \log \mathcal{C} \\
+        &  \hspace{1cm} + (1 - z_{j}) \text{ } h_{j} \log \theta_{B} \\
+        &  \hspace{1cm} + (1 - z_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Bigg] \\
     \end{aligned}
     $$
     
@@ -141,16 +141,16 @@ Now let's define our EM steps for this problem: -
     $$
     \begin{aligned}
         P(z_{j}=1 \vert y_{j}, \theta^{(m)})
-        &= P(\text{using coin A} \vert y_{j}, \theta^{(m)}) \\\
-        &= \frac{P(y_{j} \vert \text{using coin A}) \text{ } P(\text{using coin A})}{P(y_j)} \\\
-        &= \frac{P(y_{j} \vert \text{A}) \text{ } P(\text{A})}{P(y_{j} \vert \text{A}) \text{ } P(\text{A}) + P(y_{j} \vert \text{B}) \text{ } P(\text{B})}   \\\
+        &= P(\text{using coin A} \vert y_{j}, \theta^{(m)}) \\
+        &= \frac{P(y_{j} \vert \text{using coin A}) \text{ } P(\text{using coin A})}{P(y_j)} \\
+        &= \frac{P(y_{j} \vert \text{A}) \text{ } P(\text{A})}{P(y_{j} \vert \text{A}) \text{ } P(\text{A}) + P(y_{j} \vert \text{B}) \text{ } P(\text{B})}   \\
         &= \frac{(\binom{10}{h_j} \text{ } \theta_{A}^{h_j} \text{ } (1 - \theta_{A})^{10-h_j}) \text{ } (\frac{1}{2})}
                 {(\binom{10}{h_j} \text{ } \theta_{A}^{h_j} \text{ } (1 - \theta_{A})^{10-h_j}) \text{ } (\frac{1}{2}) + 
-                 (\binom{10}{h_j} \text{ } \theta_{B}^{h_j} \text{ } (1 - \theta_{B})^{10-h_j}) \text{ } (\frac{1}{2})} \\\
+                 (\binom{10}{h_j} \text{ } \theta_{B}^{h_j} \text{ } (1 - \theta_{B})^{10-h_j}) \text{ } (\frac{1}{2})} \\
         E _ { Z | \theta ( m ) } [z_j]
         &= \frac{(\theta_{A}^{h_j} \text{ } (1 - \theta_{A})^{10-h_j})}
                 {(\theta_{A}^{h_j} \text{ } (1 - \theta_{A})^{10-h_j}) + 
-                 (\theta_{B}^{h_j} \text{ } (1 - \theta_{B})^{10-h_j})} \\\
+                 (\theta_{B}^{h_j} \text{ } (1 - \theta_{B})^{10-h_j})} \\
         &= P_{j}
     \end{aligned}
     $$
@@ -158,19 +158,19 @@ Now let's define our EM steps for this problem: -
     $$
     \begin{aligned}
         Q
-        &= E _ { Z | \theta ( m ) } \Bigg[ \sum_{j} [ z_{j} \log \mathcal{C} \\\
-        &  \hspace{1cm} + z_{j} \text{ } h_{j} \log \theta_{A} \\\
-        &  \hspace{1cm} + z_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\\
-        &  \hspace{1cm} + (1 - z_{j}) \log \mathcal{C} \\\
-        &  \hspace{1cm} + (1 - z_{j}) \text{ } h_{j} \log \theta_{B} \\\
-        &  \hspace{1cm} + (1 - z_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Bigg] \\\
+        &= E _ { Z | \theta ( m ) } \Bigg[ \sum_{j} [ z_{j} \log \mathcal{C} \\
+        &  \hspace{1cm} + z_{j} \text{ } h_{j} \log \theta_{A} \\
+        &  \hspace{1cm} + z_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\
+        &  \hspace{1cm} + (1 - z_{j}) \log \mathcal{C} \\
+        &  \hspace{1cm} + (1 - z_{j}) \text{ } h_{j} \log \theta_{B} \\
+        &  \hspace{1cm} + (1 - z_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Bigg] \\
         
-        &= \sum_{j} \Big[ P_{j} \log \mathcal{C} \\\
-        &  \hspace{1cm} + P_{j} \text{ } h_{j} \log \theta_{A} \\\
-        &  \hspace{1cm} + P_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\\
-        &  \hspace{1cm} + (1 - P_{j}) \log \mathcal{C} \\\
-        &  \hspace{1cm} + (1 - P_{j}) \text{ } h_{j} \log \theta_{B} \\\
-        &  \hspace{1cm} + (1 - P_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Big] \\\
+        &= \sum_{j} \Big[ P_{j} \log \mathcal{C} \\
+        &  \hspace{1cm} + P_{j} \text{ } h_{j} \log \theta_{A} \\
+        &  \hspace{1cm} + P_{j} \text{ } (10 - h_{j}) \log (1 - \theta_{A})  \\
+        &  \hspace{1cm} + (1 - P_{j}) \log \mathcal{C} \\
+        &  \hspace{1cm} + (1 - P_{j}) \text{ } h_{j} \log \theta_{B} \\
+        &  \hspace{1cm} + (1 - P_{j}) \text{ } (10 - h_{j}) \log (1 - \theta_{B})] \Big] \\
     \end{aligned}
     $$
     Phew, that finishes defining our Q-function and the E-step. Here, E stands for finding conditional expected log-likelihood or simply our Q-function. Also, I know I haven't the numerical calculation in our problem statement. But, hang on, everything will fall into places soon.
@@ -181,7 +181,7 @@ Now let's define our EM steps for this problem: -
         \frac{\partial Q}{\partial \theta_A} 
         &= \sum_{j} \Big( \frac{P_{j} \text{ } h_j}{\theta_A} - \frac{P_{j} (10-h_j)}{(1 - \theta_A)} \Big)
         = 0
-        \\\
+        \\
         \frac{\partial Q}{\partial \theta_B} 
         &= \sum_{j} \Big( \frac{(1-P_{j}) \text{ } h_j}{\theta_B} - \frac{(1-P_{j}) (10-h_j)}{(1 - \theta_B)} \Big)
         = 0
@@ -192,7 +192,7 @@ Now let's define our EM steps for this problem: -
     
     $$
     \begin{aligned}
-        \theta^{(m+1)}_{A} &= \frac{1}{10}\frac{\sum_{j} P_{j} h_j}{\sum_{j} P_{j}} && \text{[eq. 1]}\\\
+        \theta^{(m+1)}_{A} &= \frac{1}{10}\frac{\sum_{j} P_{j} h_j}{\sum_{j} P_{j}} && \text{[eq. 1]}\\
         \theta^{(m+1)}_{B} &= \frac{1}{10}\frac{\sum_{j} (1 - P_{j}) h_j}{\sum_{j} (1 - P_{j})} && \text{[eq. 2]}
     \end{aligned}
     $$
@@ -200,20 +200,20 @@ Now let's define our EM steps for this problem: -
     <li>Let's solve our original problem now that we have all the pieces. <br/>
     $$
     \begin{aligned}
-        & h_j = [5, 9, 8, 4, 7]\\\
-        & \theta^{(0)} = (0.6, 0.5)\\\
-        & \\\
-        & P_{1} = \frac{(0.6)^{5} (0.4)^{5}}{(0.6)^{5} (0.4)^{5} + (0.5)^{5} (0.5)^{5}} \approx 0.45 \\\
-        & P_{j} = [0.45, 0.80, 0.73, 0.35, 0.65] \\\
-        & \sum_{j} P_{j} = 2.98 \\\
-        & \\\
-        & 1 - P_{j} = [1-0.45, 1-0.80, 1-0.73, 1-0.35, 1-0.65] \\\
-        & \sum_{j} (1 - P_{j}) = 5 - 2.98 = 2.02 \\\
-        & \\\
-        & h_j P_{j} = [5*0.45, 9*0.80, 8*0.73, 4*0.35, 7*0.65] \\\
-        & h_j (1 - P_{j}) = [5*0.55, 9*0.20, 8*0.27, 4*0.65, 7*0.35] \\\
-        & \\\
-        & \sum_{j} h_j P_{j} = 21.24 \\\
+        & h_j = [5, 9, 8, 4, 7]\\
+        & \theta^{(0)} = (0.6, 0.5)\\
+        & \\
+        & P_{1} = \frac{(0.6)^{5} (0.4)^{5}}{(0.6)^{5} (0.4)^{5} + (0.5)^{5} (0.5)^{5}} \approx 0.45 \\
+        & P_{j} = [0.45, 0.80, 0.73, 0.35, 0.65] \\
+        & \sum_{j} P_{j} = 2.98 \\
+        & \\
+        & 1 - P_{j} = [1-0.45, 1-0.80, 1-0.73, 1-0.35, 1-0.65] \\
+        & \sum_{j} (1 - P_{j}) = 5 - 2.98 = 2.02 \\
+        & \\
+        & h_j P_{j} = [5*0.45, 9*0.80, 8*0.73, 4*0.35, 7*0.65] \\
+        & h_j (1 - P_{j}) = [5*0.55, 9*0.20, 8*0.27, 4*0.65, 7*0.35] \\
+        & \\
+        & \sum_{j} h_j P_{j} = 21.24 \\
         & \sum_{j} h_j (1 - P_{j}) = 11.76
     \end{aligned}
     $$
