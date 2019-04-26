@@ -224,7 +224,7 @@ for i, it in enumerate(dali_iter):
     optimizer.step()
 {% endhighlight %}
 
-<i class="fab fa-google"></i> Colab notebook: [http://tiny.cc/nvidia-dali](http://tiny.cc/nvidia-dali)
+[![Google Colab](https://badgen.net/badge/Launch/on%20Google%20Colab/blue?icon=terminal)](http://tiny.cc/nvidia-dali)
 
 I'm yet to benchmark DALI in my code and will update this post once I've the results. 
 
