@@ -10,7 +10,7 @@ cover_attribution: pixabay.com
 ---
 Sometimes in your project you seek cheap thrills out of changing couple of lines of code. This is what happened when I came across the [libjpeg-turbo](https://libjpeg-turbo.org/){:target="_blank"} project. The turbo version of libjpeg boasts to be 2-6x faster in performing image processing operations. Performance is what everyone wants, right?
 
-I work with Pytorch and so I started looking for Python bindings for libjpeg-turbo. Fortunately, Github user [ajkxyz](https://github.com/ajkxyz/){:target="_blank"} has provided cffi [bindings](https://github.com/ajkxyz/jpeg4py){:target="_blank"} for libjpeg-turbo. Great! As per the author, in single threaded mode, we should expect a 30% improvement in image loading operations using these bindings. I was all in. 👀
+I work with Pytorch and so I started looking for Python bindings for libjpeg-turbo. Fortunately, Github user [@ajkxyz](https://github.com/ajkxyz/){:target="_blank"} has provided cffi [bindings](https://github.com/ajkxyz/jpeg4py){:target="_blank"} for libjpeg-turbo. Great! As per the author, in single threaded mode, we should expect a 30% improvement in image loading operations using these bindings. I was all in. 👀
 
 Using these Python bindings is pretty straight-forward, so I went ahead to implement an end-to-end Pytorch dataloader that uses libjpeg-turbo backend to load images. Further, I also numpy-fied the random horizontal and vertical flipping operations to avoid expensive PIL.Image calls. For the code below, I assume that the image folder is flat and contain images with same dimensions.
 
