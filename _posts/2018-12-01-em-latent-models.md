@@ -93,7 +93,7 @@ Now let's define our EM steps for this problem: -
     $$
     \begin{aligned}
         \mathcal{p(} \mathcal{y}, \mathcal{z} \vert \theta (m) ) 
-        &= \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta (m) && \text{[independence]} \\
+        &= \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta (m) && \text{[indep.]} \\
         \log \mathcal{p(} \mathcal{y}, \mathcal{z} \vert \theta^{(m)} )) \\
         
         &= \log \prod_{j} \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}} \vert \theta^{(m)}) && \text{[simplicity]} \\
