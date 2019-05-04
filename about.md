@@ -19,3 +19,7 @@ My favorite tech blogs: -
 - [Sebastian Ruder](http://ruder.io/){:target="_blank"}
 - [Lil'Log](https://lilianweng.github.io/lil-log/){:target="_blank"}
 - [Jay Alammar](http://jalammar.github.io/){:target="_blank"}
+
+Books I wish to read: -
+
+- [My Amazon books wishlist](https://www.amazon.com/gp/registry/wishlist/3JMN5JCMYRY9P/)
