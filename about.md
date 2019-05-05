@@ -23,3 +23,7 @@ My favorite tech blogs: -
 Books I wish to read: -
 
 - [My Amazon books wishlist](https://www.amazon.com/gp/registry/wishlist/3JMN5JCMYRY9P/)
+
+RSS feed: -
+
+- <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Basic ML RSS Feed</a></p>

@@ -30,7 +30,19 @@
     {{ include_to_scssify | scssify }}
   </style>
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" as="style" onload="this.rel='stylesheet'">
-
+  <link rel="preload" href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" as="style" onload="this.rel='stylesheet'">
+  <style type="text/css">
+    #mc_embed_signup{background:#fff;font:14px inherit; width:100%;float: left}
+    #mc_embed_signup .button {
+      background-color: #2a7ae2;
+      cursor: pointer;
+    }
+    #mc_embed_signup .button:hover {
+      background-color: #1756a9;
+      cursor: pointer;
+    }
+  </style>
+  
   {%- feed_meta -%}
   {% if site.tags != "" %}
     {% include collecttags.html %}
