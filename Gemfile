@@ -9,4 +9,5 @@ gem 'jekyll-gist'
 gem 'jekyll-sitemap'
 gem 'jekyll-tagging'
 gem 'jekyll-paginate'
-gem "jekyll-inline-svg"
+gem 'jekyll-inline-svg'
+gem 'jekyll-netlify-headers'
