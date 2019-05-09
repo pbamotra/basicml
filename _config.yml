@@ -74,11 +74,3 @@ header_pages:
 
 sass:
     style: compressed
-
-netlify:
-  headers:
-    - paths:
-        - /*
-      headers:
-        - "X-Frame-Options: DENY"
-        - "X-XSS-Protection: 1; mode=block"
