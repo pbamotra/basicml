@@ -49,6 +49,7 @@ plugins:
  - jekyll-sitemap
  - jekyll-paginate
  - jekyll-inline-svg
+ - jekyll-archives
 
 markdown: kramdown
 
@@ -71,6 +72,7 @@ svg:
 # this and add the path to the pages in order as they should show up
 header_pages:
   - about.md
+  - archive.md
 
 sass:
     style: compressed
