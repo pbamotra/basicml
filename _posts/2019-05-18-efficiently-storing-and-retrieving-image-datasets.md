@@ -202,6 +202,8 @@ if __name__ == '__main__':
 
 To run the dataloader, simply execute the script above. I've used [nonechucks](https://github.com/msamogh/nonechucks){:target="_blank"}, which basically removes bad images from a batch. Simple and neat, isn't it? According to my tests, I was able to achieve 65% reduction in time iterating over data set! That's good amount savings in terms of training time. I'm currently working on integrating this code to store all of my training image data set. Let's see how that goes.
 
+[MIT License](/assets/license.txt){:target="_blank"}
+
 Happy coding. Stay classy.
 
 #### Links:

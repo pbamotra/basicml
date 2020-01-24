@@ -82,6 +82,7 @@ if __name__ == "__main__":
 I use a custom collate function because the in-built toTensor is a pretty involved function which slows down the whole array to tensor creation part. This collate function has been borrowed from the [Nvidia/apex](https://github.com/NVIDIA/apex){:target="_blank"} which lets you do half-precision training. Let's keep that discussion for another post.
 
 [![Google Colab](https://badgen.net/badge/Launch/on%20Google%20Colab/blue?icon=terminal)](https://colab.research.google.com/drive/1WUvqftk1d7t7p2aGS-_Jaf_eK1170ZhZ)
+[MIT License](/assets/license.txt){:target="_blank"}
 
 I was able to squeeze +20% performance. Not bad! Change the batch size for more juice maybe?
 
