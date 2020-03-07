@@ -50,6 +50,7 @@ plugins:
  - jekyll-paginate
  - jekyll-inline-svg
  - jekyll-archives
+ - jekyll-stickyposts
 
 markdown: kramdown
 
@@ -76,3 +77,11 @@ header_pages:
 
 sass:
     style: compressed
+
+stickyposts:
+  # enabled: false   # Enable StickyPosts; default: true
+  # debug: true      # Show additional info; default: false
+  sort: "none"      # Optional sort field; default: "date", use "none" to avoid sorting
+  # reverse: true     # Ascending order, default: false
+  retain: false      # Also show sticky posts in their original positions; default: false
+  # reverse_sticky: true    # Reverse the order of the sticky posts, e.g. oldest first; default: false

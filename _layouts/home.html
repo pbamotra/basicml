@@ -5,9 +5,9 @@ layout: default
 <div class="home">
 
   {% if site.paginate %}
-  {% assign posts = paginator.posts %}
+  {% assign posts = paginator.posts | sort: "stickiness"%}
   {% else %}
-  {% assign posts = site.posts %}
+  {% assign posts = site.posts | sort: "stickiness"%}
   {% endif %}
 
   <h1 class="page-heading">Posts</h1>
@@ -16,10 +16,18 @@ layout: default
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     {% for post in posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
+        {% if post.sticky == null %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {% else %}
+          <span class="post-meta">Pinned</span>
+        {% endif %}
         <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url | relative_url }}"> 
+            {% if post.sticky %}
+            <i class="fas fa-thumbtack" style="color: brown;">&nbsp;</i> 
+            {% endif %}
+            {{ post.title | escape }}
+          </a>
         </h2>
       </li>
     {% endfor %}
