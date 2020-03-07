@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nifty code snippets for ML"
+title: "Nifty Python code snippets"
 categories: 
     - hacks
 tags: python coding ml-hacks
