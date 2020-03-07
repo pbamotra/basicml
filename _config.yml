@@ -81,7 +81,7 @@ sass:
 stickyposts:
   # enabled: false   # Enable StickyPosts; default: true
   # debug: true      # Show additional info; default: false
-  sort: "none"      # Optional sort field; default: "date", use "none" to avoid sorting
-  # reverse: true     # Ascending order, default: false
+  # sort: "date"      # Optional sort field; default: "date", use "none" to avoid sorting
+  # reverse: false     # Ascending order, default: false
   retain: false      # Also show sticky posts in their original positions; default: false
   # reverse_sticky: true    # Reverse the order of the sticky posts, e.g. oldest first; default: false
