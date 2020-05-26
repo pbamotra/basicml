@@ -21,7 +21,9 @@ layout: compress
     </main>
 
     {%- include footer.html -%}
-    {%- include katex.html -%}
+    {% if page.layout == 'post' %}
+      {%- include katex.html -%}
+    {% endif %}
   </body>
 
 </html>
