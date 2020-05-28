@@ -10,7 +10,9 @@ layout: compress
   <body>
 
     {%- include header.html -%}
-
+    {% if page.annotate %}
+      <script type="module" src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+    {% endif %}
     <main class="page-content" aria-label="Content">
       {% if page.layout == 'post' %}
         <div class="rows" style="background: {{ page.cover_art }}; background-size: {{ page.cover_art_size }}"></div>

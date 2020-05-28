@@ -8,6 +8,7 @@ cover_art: url(/assets/imgs/icons8/flamenco/flamenco-done.png) no-repeat right
 cover_art_size: 100%
 cover_attribution: icons8.com/ouch
 ---
+<!-- <script type="module" src="/assets/js/2019-05-18.js"></script> -->
 I have been working on Computer Vision projects for some time now and moving from NLP domain the first thing I realized was that image datasets are yuge! I typically process 500GiB to 1TB of data at a time while training deep learning models. Out of the box, I rely on using `ImageFolder` class of Pytorch but disk reads are so slow (innit?). I was reading through open source projects to see how people efficiently process large image data sets like [Places](https://places2.csail.mit.edu/download.html){:target="_blank"}. That's how I stumbled into [LMDB](https://symas.com/lmdb/){:target="_blank"} store which is the focus of this post. The tagline on the official project page justifies the benefits of using LMDB: -
 
 > An ultra-fast, ultra-compact, crash-proof key-value embedded data store.
