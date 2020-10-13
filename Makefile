@@ -1,4 +1,4 @@
 build:
 	python gentags.py
-	bundle update
+	bundle install && bundle update
 	jekyll build
