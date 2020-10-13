@@ -56,6 +56,7 @@ markdown: kramdown
 
 kramdown:
   math_engine: mathjax
+  input: GFM
 
 jekyll-mentions:
   base_url: https://twitter.com
