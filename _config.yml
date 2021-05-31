@@ -38,7 +38,7 @@ tags: tutorial, machine learning, python, deep learning, computer vision, मश
 
 # Build settings
 markdown: kramdown
-theme: website
+theme: minima
 
 plugins:
   - jekyll-paginate
