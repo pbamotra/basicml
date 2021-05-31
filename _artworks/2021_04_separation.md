@@ -11,6 +11,6 @@ location: Redmond WA, USA
 sortdate: 2021-03-29
 inspiration: https://www.instagram.com/p/BkcVBqvDFkb/
 date: 29-03-2021
-image: /_assets/images/IMG_6863.png
+image: /_assets/images/IMG_6863.jpg
 ---
-![](/_assets/images/IMG_6863.png)
+![](/_assets/images/IMG_6863.jpg)

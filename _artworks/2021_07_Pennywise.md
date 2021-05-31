@@ -11,6 +11,6 @@ location: Redmond WA, USA
 sortdate: 2021-05-18
 inspiration:
 date: 18-05-2021
-image: /_assets/images/IMG_7242.png
+image: /_assets/images/IMG_7242.jpg
 ---
-![](/_assets/images/IMG_7242.png)
+![](/_assets/images/IMG_7242.jpg)
