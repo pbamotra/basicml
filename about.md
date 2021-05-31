@@ -1,29 +1,21 @@
 ---
+permalink: /about.html
 layout: page
-title: About
-permalink: /about/
+title: "About ..."
 ---
 
-<figure>
-    <img src="https://ucarecdn.com/d7baf350-c689-4a56-b390-c72bf6542f16/about.gif" alt="about image from imcmc" width="173px" height="152px"/>
-</figure>
-<iframe src="https://ghbtns.com/github-btn.html?user=pbamotra&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
-Hi! I'm Pankesh Bamotra and this is my technical blog. The content of the posts reflects my opinions and experiments on machine learning algorithms and related technologies. I'm a computer vision research engineer at [Coupang](https://www.coupang.com/) US working on problems ranging from extreme label image classification to street-to-shop visual search. I'm a Pythonista and an avid reader of economic history books.
 
-<i class="far fa-file-pdf"></i> [Résumé](/assets/pbamotra-resume-compressed.pdf){:target="_blank"}
+# ... myself
 
-<hr/>
+My name is Florian Schneider and I am an interdisciplinary environmental scientist working on biodiversity topics.
 
-My favorite tech blogs: -
 
-- [Sebastian Ruder](http://ruder.io/){:target="_blank"}
-- [Lil'Log](https://lilianweng.github.io/lil-log/){:target="_blank"}
-- [Jay Alammar](http://jalammar.github.io/){:target="_blank"}
+# ... the website
 
-Books I wish to read: -
+This is a static website hosted at [Github.com](https://github.com/fdschneider) benefiting from *GitHub Pages*. The sites are generated using [Jekyll](http://jekyllrb.com/).
 
-- [My Amazon books wishlist](https://www.amazon.com/gp/registry/wishlist/3JMN5JCMYRY9P/)
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:10; float:left;  padding: 10px 10px" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 
-RSS feed: -
+All text that I provide on these pages is published under [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). This means, you are free to use re-use content for your own purposes as long as you give reference in an appropriate way.
 
-- <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Basic ML RSS Feed</a></p>
+The font I am using is [ET book](https://github.com/edwardtufte/et-book) ( Copyright &copy; 2015 Dmitry Krasny, Bonnie Scranton, Edward Tufte) in a webfont implementation by  [Adam Schwartz](https://github.com/adamschwartz).

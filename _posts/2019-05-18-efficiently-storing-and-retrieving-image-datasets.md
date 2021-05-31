@@ -4,12 +4,12 @@ title: "Efficiently processing large image datasets in Python"
 categories: 
     - performance
 tags: python pytorch lmdb images computer-vision deep-learning
-cover_art: url(/assets/imgs/icons8/flamenco/flamenco-done.png) no-repeat right
+cover_art: url(/_assets/imgs/icons8/flamenco/flamenco-done.png) no-repeat right
 cover_art_size: 100%
 cover_attribution: icons8.com/ouch
 ---
-<!-- <script type="module" src="/assets/js/2019-05-18.js"></script> -->
-I have been working on Computer Vision projects for some time now and moving from NLP domain the first thing I realized was that image datasets are yuge! I typically process 500GiB to 1TB of data at a time while training deep learning models. Out of the box, I rely on using `ImageFolder` class of Pytorch but disk reads are so slow (innit?). I was reading through open source projects to see how people efficiently process large image data sets like [Places](https://places2.csail.mit.edu/download.html){:target="_blank"}. That's how I stumbled into [LMDB](https://symas.com/lmdb/){:target="_blank"} store which is the focus of this post. The tagline on the official project page justifies the benefits of using LMDB: -
+<!-- <script type="module" src="/_assets/js/2019-05-18.js"></script> -->
+I have been working on Computer Vision projects for some time now and moving from NLP domain the first thing I realized was that image datasets are yuge! I typically process 500GiB to 1TB of data at a time while training deep learning models. Out of the box, I rely on using `ImageFolder` class of Pytorch but disk reads are so slow (innit?). I was reading through open source projects <!--break--> to see how people efficiently process large image data sets like [Places](https://places2.csail.mit.edu/download.html){:target="_blank"}. That's how I stumbled into [LMDB](https://symas.com/lmdb/){:target="_blank"} store which is the focus of this post. The tagline on the official project page justifies the benefits of using LMDB: -
 
 > An ultra-fast, ultra-compact, crash-proof key-value embedded data store.
 
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 
 To run the dataloader, simply execute the script above. I've used [nonechucks](https://github.com/msamogh/nonechucks){:target="_blank"}, which basically removes bad images from a batch. Simple and neat, isn't it? According to my tests, I was able to achieve 65% reduction in time iterating over data set! That's good amount savings in terms of training time. I'm currently working on integrating this code to store all of my training image data set. Let's see how that goes.
 
-[MIT License](/assets/license.txt){:target="_blank"}
+[MIT License](/_assets/license.txt){:target="_blank"}
 
 Happy coding. Stay classy.
 

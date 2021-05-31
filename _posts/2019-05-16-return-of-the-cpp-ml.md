@@ -4,7 +4,7 @@ title: "C++ for ML dev - Flashlight / Arrayfire"
 categories: 
     - vices
 tags: c++ flashlight arrayfire machine-learning
-cover_art: url(/assets/imgs/icons8/cherry/cherry-success.png) no-repeat right
+cover_art: url(/_assets/imgs/icons8/cherry/cherry-success.png) no-repeat right
 cover_art_size: 100%
 cover_attribution: icons8.com/ouch
 ---

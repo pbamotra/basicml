@@ -4,11 +4,12 @@ title: "Working with broken images in Pytorch"
 categories: 
     - performance
 tags: python pytorch images 
-cover_art: url(/assets/imgs/icons8/cherry/cherry-fatal-error.png) no-repeat right
+cover_art: url(/_assets/imgs/icons8/cherry/cherry-fatal-error.png) no-repeat right
 cover_art_size: 80%
 cover_attribution: icons8.com/ouch
 ---
 Too often I've found myself in this problem with Pytorch where the [dataloader](https://pytorch.org/docs/stable/data.html){:target="_blank"} doesn't work because there's a bad image in the dataset. One solution would definitely be to write a module that loads each image and then deletes the bad ones. But, I wanted something elegant and the following code is an attempt at smoothly ignoring the bad images in batches while also being able to process non-RGB images.
+<!--break-->
 
 ```python
 # torchimageprocessor.ipynb
@@ -86,7 +87,7 @@ print(f"Total images seen: {imgs_seen}")
 I've mentioned about [nonechucks](https://github.com/msamogh/nonechucks){:target="_blank"} in one of my previous posts [here](/performance/2019/05/18/efficiently-storing-and-retrieving-image-datasets.html). But, the solution presented above is using native Pytorch API and looks much simpler.
 
 [![Google Colab](https://badgen.net/badge/Launch/on%20Google%20Colab/blue?icon=terminal)](https://colab.research.google.com/drive/1362I-QueZ4kN0zbsKIrfnhNCvj_dnrYJ?usp=sharing)
-[MIT License](/assets/license.txt){:target="_blank"}
+[MIT License](/_assets/license.txt){:target="_blank"}
 
 Happy coding. Stay classy.
 

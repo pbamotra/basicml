@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header class="post-header">
+		<a href="/art">&#8592; See all artworks</a>
+		<h1 class="post-title">{{ page.title | markdownify}}</h1>
+</header>
+
+	<div>
+		<h5> {{ page.authors | prepend: '*by* &nbsp;' | markdownify }}</h5>
+	</div>
+
+
+	<div class = "abstract">
+
+	{{ page.content | markdownify }}
+
+	</div>
+
+<div>
+{% if page.media %}<h5> {{ page.media }} </h5>{% endif %}
+  {% if page.event %}<h5> <i>at</i> {{ page.event }} </h5>{% endif %}
+  {% if page.inspiration %}<h5> <i>inspired from - </i> {{ page.inspiration }} </h5>{% endif %}
+  {% if page.date %}<h5>{{ page.date | date_to_long_string }} </h5>  {% endif %}
+</div>

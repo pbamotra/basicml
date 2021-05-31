@@ -1,83 +1,48 @@
+# Site settings
 title: Pankesh Bamotra
-twist: Not
-url: https://www.pankesh.com
-resume: /about/
-author: Pankesh Bamotra
-email: pankesh.bamotra@gmail.com
-google_analytics:
+subtitle: "Data Scientist, Coupang USA"
 
-profession: Research engineer, Coupang
-description: Everything machine learning
-keywords: expert, tutorial, machine learning, python, deep learning, computer vision, मशीन लर्निंग, natural language processing, 深度 学习, 自然 语言 处理, artificial intelligence
+description: > # this means to ignore newlines until "baseurl:"
+  I am a data scientist and I work on image classification, visual search, 
+  and object detection to detect structured information.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://www.pankesh.com" # the base hostname & protocol for your site
+relative_permalinks: false
 
-# social links
-github_username: pbamotra
-linkedin_username: pbamotra
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-# instagram_username: jekyll
-# linkedin_username: jekyll
-# pinterest_username: jekyll
-# youtube_username: jekyll
-# googleplus_username: +jekyll
+keywords: tutorial, machine learning, python, deep learning, computer vision, मशीन लर्निंग, natural language processing, 深度 学习, 自然 语言 处理, artificial intelligence
 
-# Mastodon instances
-# mastodon:
-# - username: jekyll
-#   instance: example.com
-# - username: jekyll2
-#   instance: example.com
+include: ["_assets", "_posts", "_pages", "_artworks"]
 
+social:
+  github: pbamotra
+  medium: pbamotra
 
-show_excerpts: false # set to true to show excerpts on the homepage
+avatar: "_assets/pankesh-style-cpng.png"
+disqus_short_name : 
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%b %-d, %Y"
+contacts:
+  email: <i>firstname</i>.<i>lastname</i>@gmail.com
+  postal:
+    address1:
+    address2:
+    street:
+    zip:
+    city: Redmond, Washington
+    country: USA
+  phone:
+  pubkey:
+
+cv_file: _assets/Pankesh___Resume.pdf
+publist_file:
+tags: tutorial, machine learning, python, deep learning, computer vision, मशीन लर्निंग, natural language processing, 深度 学习, 自然 语言 处理, artificial intelligence
 
 # Build settings
-theme: minima
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-picture-tag
- - jekyll-mentions
- - jekyll-gist
- - jekyll-sitemap
- - jekyll-paginate
- - jekyll-inline-svg
- - jekyll-archives
- - jekyll-stickyposts
-
 markdown: kramdown
 
-kramdown:
-  math_engine: mathjax
-  input: GFM
-
-jekyll-mentions:
-  base_url: https://twitter.com
-
-scholar:
-  style: mla
-
-paginate: 5
-paginate_path: "/page/:num/"
-
-svg:
-  optimize: true
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-header_pages:
-  - about.md
-  - archive.md
-
-sass:
-    style: compressed
+plugins:
+  - jekyll-paginate
+  - jekyll-stickyposts
+  - jekyll-inline-svg
 
 stickyposts:
   # enabled: false   # Enable StickyPosts; default: true
@@ -86,3 +51,6 @@ stickyposts:
   # reverse: false     # Ascending order, default: false
   retain: false      # Also show sticky posts in their original positions; default: false
   # reverse_sticky: true    # Reverse the order of the sticky posts, e.g. oldest first; default: false
+
+paginate: 5
+paginate_path: "/blog/page/:num/"

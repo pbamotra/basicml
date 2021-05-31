@@ -4,7 +4,7 @@ title: "Fast data augmentation in Pytorch using Nvidia DALI"
 categories: 
     - performance
 tags: pytorch augmentation gpu-processing nvidia DALI
-cover_art: url(/assets/imgs/icons8/arabica/arabica-11.png) no-repeat right
+cover_art: url(/_assets/imgs/icons8/arabica/arabica-11.png) no-repeat right
 cover_art_size: 90%
 cover_attribution: absurd.design
 discussion_id: 2019-03-welcome
@@ -32,14 +32,14 @@ def get_image_transforms() -> transforms.Compose:
 While stumbling on github I found that people working at Nvidia had recently released a library - [DALI](https://github.com/NVIDIA/DALI) that is supposed to tackle exactly this issue. The library is still under active development and supports fast data augmentation for all major ML development libraries out there - [Pytorch](https://pytorch.org/), [Tensorflow](https://www.tensorflow.org/), [MXNet](https://mxnet.apache.org/).
 
 <figure>
-{% svg /assets/imgs/data-pipeline.svg alt="Typical data pipeline" %}
+{% svg /_assets/imgs/data-pipeline.svg alt="Typical data pipeline" %}
 <figcaption style="text-align: center">Fig 1: A typical data augmentation pipeline</figcaption>
 </figure>
 
 Using Nvidia DALI, the above data pipeline can be optimized by moving appropriate [operations](https://docs.nvidia.com/deeplearning/sdk/dali-developer-guide/docs/supported_ops.html){:target="_blank"} to GPU. After using DALI, the pipeline looks something like -
 
 <figure>
-{% svg /assets/imgs/dali-pipeline.svg alt="Nvidia DALI pipeline" %}
+{% svg /_assets/imgs/dali-pipeline.svg alt="Nvidia DALI pipeline" %}
 <figcaption style="text-align: center">Fig 2: An Nvidia DALI pipeline</figcaption>
 </figure>
 

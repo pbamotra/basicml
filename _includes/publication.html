@@ -1,0 +1,5 @@
+<a href= "{{ BASE_PATH }}{{publication.url}}">{{ publication.authors }} ({{ publication.date | date: "%Y"}}), {{ publication.title }}, <i>{{ publication.journal }}</i>, {{ publication.volume }} {{ publication.issue }}{% if publication.pages%}:{% endif %}{{ publication.pages }}
+ doi:  {{publication.doi}}</a>
+{% if publication.pdf %}
+(<a href = "{{publication.pdf}}">pdf</a>)
+{% endif %}

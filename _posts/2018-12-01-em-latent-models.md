@@ -4,7 +4,7 @@ title: Expectation Maximization distilled to basics
 categories: 
     - basics
 tags: machine-learning expectation-maximization latent-models
-cover_art: url(/assets/imgs/icons8/flamenco/flamenco-searching.png) no-repeat right
+cover_art: url(/_assets/imgs/icons8/flamenco/flamenco-searching.png) no-repeat right
 cover_art_size: 100%
 cover_attribution: icons8.com/ouch
 ---
@@ -68,7 +68,7 @@ Consider a simple coin-flipping experiment in which we are given a pair of coins
 
 <div class="svg-container">
     <figure class="caption">
-        <img src="/assets/imgs/nature-em.svg" alt="EM coin toss example"/>
+        <img src="/_assets/imgs/nature-em.svg" alt="EM coin toss example"/>
         <figcaption>Source: Nature Biotechnology, Vol. 26 Page: 898</figcaption>
     </figure> 
 </div>
@@ -104,7 +104,7 @@ Now let's define our EM steps for this problem: -
         & \hspace{1.5cm} \times \mathcal{p(} \mathcal{y_{j}}, \mathcal{z_{j}}=0 \vert \theta^{(m)})^{1 - z_{j}} ] \\
         
         &= \sum_{j} \log \Bigg[ \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{A}^{h_{j}} \text{ } (1 - \theta_{A})^{10 - h_{j}} \Big)^{z_{j}} \\
-        &  \hspace{1.5cm} \times \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10 -h_{j}} \Big)^{1 - z_{j}} \Bigg] && \text{[$ h_{j} $ = \#heads]} \\
+        &  \hspace{1.5cm} \times \Big(\frac{1}{2} \text{ } \binom{10}{h_{j}} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10 -h_{j}} \Big)^{1 - z_{j}} \Bigg] && \text{[$ h_{j} $ = #heads]} \\
         
         &= \sum_{j} \log \Bigg[ \Big( \mathcal{C} \text{ } \theta_{A}^{h_{j}} \text{ } (1 - \theta_{A})^{10-h_{j}} \Big)^{z_{j}} \\
         &  \hspace{1.5cm} \times \Big( \mathcal{C} \text{ } \theta_{B}^{h_{j}} \text{ } (1 - \theta_{B})^{10-h_{j}} \Big)^{1 - z_{j}} \Bigg] \\
@@ -240,7 +240,7 @@ with \( \mathcal{X} (y) \neq \emptyset, \theta \geq (\theta^{(m)}) \) if \( Q(\t
 <br/>
 <div class="svg-container">
     <figure class="caption">
-        <img src="/assets/imgs/em.png" alt="EM monotonicity"/>
+        <img src="/_assets/imgs/em.png" alt="EM monotonicity"/>
         <figcaption>Inspired by: Sean Borman, EM Tutorial<sup><a href="#fn2">2</a></sup></figcaption>
     </figure> 
 </div>

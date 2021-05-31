@@ -1,0 +1,13 @@
+<div class = "artpreview">
+<div class = "artthumb">
+  <img src="{{ artwork.image }}">
+</div>
+<div class = "arttitle">
+  <a href= "{% if artwork.URL %}{{artwork.URL}}{% else %}{{ BASE_PATH }}{{artwork.url}}{% endif %}">
+    <h4>{{ artwork.title }}</h4>
+    <i>by</i> {{ artwork.authors }} ({{ artwork.date | date: "%Y"}}) <br>
+    {% if artwork.event %}<i>at</i> {{ artwork.event }}
+    {% endif %}
+</div>
+
+</div>

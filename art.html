@@ -1,0 +1,18 @@
+---
+permalink: /art/
+categories: pages
+layout: page
+title: Artworks
+---
+
+<br><br>
+	<div class = "publist">
+		<ul>
+    {% assign artworks = site.pages | sort: 'sortdate' | reverse  %}
+		{% for artwork in artworks %}
+			{% if artwork.categories contains 'artwork'%}
+			 <li>{% include artwork.html %}</li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+	</div>
