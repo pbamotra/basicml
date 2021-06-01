@@ -5,7 +5,7 @@ tag: watercolor, pen, and ink
 title: On Separation
 media: Winsor & Newton mould made water colour paper, 10in x 14in
 authors: Pankesh Bamotra
-permalink: /separation/
+permalink: /art/separation/
 event: 
 location: Redmond WA, USA
 sortdate: 2021-03-29

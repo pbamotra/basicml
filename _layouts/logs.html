@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<header class="post-header">
+		<a href="/logs">&#8592; See all logs</a>
+		<h1 class="post-title">{{ page.title | markdownify}}</h1>
+</header>
+
+	<div>
+		<h3>Logs for the week of {% if page.date %} <i>{{ page.date | date_to_long_string }} </i>  {% endif %}</h3>
+	</div>
+
+	<div class = "abstract">
+
+	{{ page.content | markdownify }}
+
+	</div>
+
+<div>
+
+</div>

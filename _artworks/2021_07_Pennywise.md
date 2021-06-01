@@ -5,7 +5,7 @@ tag: pen, and ink
 title: Pennywise
 media: Strathmore 455-3, 400 Series Sketch Pad, 9in x 12in
 authors: Pankesh Bamotra
-permalink: /pennywise/
+permalink: /art/pennywise/
 event: 
 location: Redmond WA, USA
 sortdate: 2021-05-18

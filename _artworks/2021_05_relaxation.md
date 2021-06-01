@@ -5,7 +5,7 @@ tag: watercolor, pen, and ink
 title: Relaxation
 media: Winsor & Newton mould made water colour paper, 10in x 14in
 authors: Pankesh Bamotra
-permalink: /relaxation/
+permalink: /art/relaxation/
 event: 
 location: Redmond WA, USA
 sortdate: 2021-04-04

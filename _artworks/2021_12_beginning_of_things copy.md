@@ -5,7 +5,7 @@ tag: pencil
 title: The Beginning of things
 media: Strathmore 455-3, 400 Series Sketch Pad, 9in x 12in
 authors: Pankesh Bamotra
-permalink: /beginning-mahabharata/
+permalink: /art/beginning-mahabharata/
 event: 
 location: Redmond WA, USA
 sortdate: 2021-05-16

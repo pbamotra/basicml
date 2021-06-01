@@ -1,0 +1,18 @@
+---
+permalink: /logs/
+categories: pages
+layout: page
+title: Weak logs
+---
+
+<br><br>
+	<div class = "publist">
+		<ul>
+    {% assign logs = site.pages | sort: 'sortdate' | reverse  %}
+		{% for log in logs %}
+			{% if log.categories contains 'log'%}
+			 <li>{% include logs.html %}</li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+	</div>

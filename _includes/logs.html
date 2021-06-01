@@ -1,0 +1,3 @@
+<li><a href= "{% if log.URL %}{{log.URL}}{% else %}{{ BASE_PATH }}{{log.url}}{% endif %}">
+    {{ log.date | date: "%b %d, %Y"}} <br>
+  </li>

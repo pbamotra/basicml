@@ -5,7 +5,7 @@ tag: watercolor, pen, and ink
 title: Falling from heaven in watercolor
 media: Winsor & Newton mould made water colour paper, 10in x 14in
 authors: Pankesh Bamotra
-permalink: /crossingthevalley/
+permalink: /art/crossingthevalley/
 event: 
 location: Redmond WA, USA
 sortdate: 2021-03-18

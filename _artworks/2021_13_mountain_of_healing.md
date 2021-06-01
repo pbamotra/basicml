@@ -5,7 +5,7 @@ tag: pencil
 title: Mountain of Healing
 media: Strathmore 455-3, 400 Series Sketch Pad, 9in x 12in
 authors: Pankesh Bamotra
-permalink: /mountain-of-healing/
+permalink: /art/mountain-of-healing/
 event: 
 location: Redmond WA, USA
 sortdate: 2021-05-29
