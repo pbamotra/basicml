@@ -4,7 +4,7 @@ subtitle: "Data Scientist, Coupang"
 
 description: > # this means to ignore newlines until "baseurl:"
   I am a data scientist and I work on image classification, visual search, 
-  and object detection to detect structured information.
+  and object detection.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.pankesh.com" # the base hostname & protocol for your site
 relative_permalinks: false
