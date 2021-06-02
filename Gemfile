@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 gemspec
 
+gem 'github-pages'
 gem 'jekyll-picture-tag'
 gem 'jekyll-gist'
 gem 'jekyll-sitemap'
