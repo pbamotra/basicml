@@ -3,11 +3,15 @@
   <img src="{{ artwork.image }}">
 </div>
 <div class = "arttitle">
+  {%   assign today = site.time | date: '%s' %}
+  {%   assign start = artwork['date'] | date: '%s' %}
+  {%   assign secondsSince = today | minus: start     %}
+  {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+  {%   assign daysSince = hoursSince | divided_by: 24  %}
   <a href= "{% if artwork.URL %}{{artwork.URL}}{% else %}{{ BASE_PATH }}{{artwork.url}}{% endif %}">
-    <h4>{{ artwork.title }}</h4>
+    <h4>{{ artwork.title }} {% if daysSince < 6%}<sup style="font-size: small; color:red">new</sup>{% endif %}</h4>
     <i>by</i> {{ artwork.authors }} ({{ artwork.date | date: "%Y"}}) <br>
     {% if artwork.event %}<i>at</i> {{ artwork.event }}
     {% endif %}
 </div>
-
 </div>

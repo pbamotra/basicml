@@ -8,9 +8,21 @@
    </div>
 
    <div  class="site-info">
+    {%   assign today = site.time | date: '%s' %}
+    {%   assign artworks = site.pages | sort: 'sortdate' | reverse %}
+    {% for artwork in artworks %}
+			{% if artwork.categories contains 'artwork'%}
+        {% assign latest_art = artwork %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {%   assign start = latest_art['date'] | date: '%s' %}
+    {%   assign secondsSince = today | minus: start     %}
+    {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+    {%   assign daysSince = hoursSince | divided_by: 24  %}
      <p style="margin-bottom: 0px">&#128444;</p>
      <p> 2020 lockdown blues inspired me to create, draw, sketch, cut, and fold. I'm lovin' it. </p>
-     <a href="{{site.baseurl}}/art/">Artworks</a>
+     <a href="{{site.baseurl}}/art/">Artworks {% if daysSince < 6%}<sup style="font-size: xx-small; color:red">new</sup>{% endif %}</a>
        <!--  <hr class="intro-divider"> -->
 
    </div>
@@ -19,7 +31,7 @@
     <p style="margin-bottom: 0px">&#128218;</p>
     <p> I love to read books ranging from political thought, economics, philosophy, and ofcourse machine learning & programming. For that matter, this list is never-ending.</p>
 
-    <a href="{{site.baseurl}}/">Notes <tt style="font-size: xx-small; background-color: red; color:white">coming soon</tt></a> |
+    <a href="{{site.baseurl}}/">Notes <sup style="font-size: xx-small; color:blue">coming soon</sup></a> |
     <a href="https://www.amazon.com/hz/wishlist/ls/3JMN5JCMYRY9P" target="_blank">Books wishlist</a>
       <!--  <hr class="intro-divider"> -->
 
