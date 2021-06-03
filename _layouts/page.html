@@ -10,11 +10,12 @@ layout: default
   <article class="post-content">
 
     {% if page.date %}
-  	   <h5 style = "text-align: margin-top: -2em; margin-bottom: 2em;"> by <b>{{ page.author}}</b>, {{ page.date | date_to_long_string }}
+  	  <h5 style = "text-align: margin-top: -2em; margin-bottom: 2em;"> by <b>{{ page.author}}</b>, {{ page.date | date_to_long_string }}
+      {% if page.medium %}
+        , <a href = "https://medium.com/{{ page.medium }}">read on Medium.com</a>
+      {% endif %}
+      </h5>
     {% endif %}
-    {% if page.medium %}
-      , <a href = "https://medium.com/{{ page.medium }}">read on Medium.com</a>
-    {% endif %}</h5>
     {% if page.teaser %}
     	<div class = "teaser"> {{ page.teaser | markdownify }} </div>
     {% endif %}
