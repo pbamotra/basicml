@@ -10,12 +10,6 @@
     "clean": "gatsby clean"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "gatsby": "^3.7.0",
-    "gatsby-theme-andy": "/Users/pbamotra/Documents/playground/gatsby-theme-andy",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+  "author": "Pankesh Bamotra",
+  "license": "MIT"
 }
