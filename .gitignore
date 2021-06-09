@@ -8,3 +8,5 @@ _site
 tag
 # Local Netlify folder
 .netlify
+node_modules/
+.cache/
