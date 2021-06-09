@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix: `/second-brain`,
+  pathPrefix: `second-brain`,
   siteMetadata: {
-    title: 'Pankesh Bamotra',
+    title: 'Pankesh Bamotra'
   },
   plugins: [`gatsby-theme-andy`],
 };

@@ -5722,9 +5722,8 @@ gatsby-telemetry@^2.7.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-"gatsby-theme-andy@https://github.com/pbamotra/gatsby-theme-andy#pbamotra":
-  version "0.2.1"
-  resolved "https://github.com/pbamotra/gatsby-theme-andy#a447957647ae2d31d68fbc8d84a5c24ede8d9916"
+gatsby-theme-andy@/Users/pbamotra/Documents/playground/gatsby-theme-andy:
+  version "0.2.0"
   dependencies:
     "@aengusm/gatsby-theme-brain" "^1.0.13"
     "@tippyjs/react" "^4.1.0"

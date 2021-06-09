@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "gatsby": "^3.7.0",
-    "gatsby-theme-andy": "https://github.com/pbamotra/gatsby-theme-andy#pbamotra",
+    "gatsby-theme-andy": "/Users/pbamotra/Documents/playground/gatsby-theme-andy",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

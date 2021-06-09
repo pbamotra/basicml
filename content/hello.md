@@ -1,4 +1,4 @@
 ---
 title: Hello world!
 ---
-Coming soon.
+Coming soon. 
