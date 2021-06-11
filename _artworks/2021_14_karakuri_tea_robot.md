@@ -11,15 +11,15 @@ location: Redmond WA, USA
 sortdate: 2021-06-08
 inspiration: Karakuri no Moto - Paper craft book 
 date: 08-06-2021
-image: /_assets/images/karakuri-robot/karakuri-robot-1.png
+image: /_assets/images/karakuri-robot/karakuri-robot-1.jpg
 ---
-![](/_assets/images/karakuri-robot/karakuri-robot-4.png)
+![](/_assets/images/karakuri-robot/karakuri-robot-4.jpg)
 <br/><br/>
-![](/_assets/images/karakuri-robot/karakuri-robot-5.png)
+![](/_assets/images/karakuri-robot/karakuri-robot-5.jpg)
 <br/><br/>
-![](/_assets/images/karakuri-robot/karakuri-robot-2.png)
+![](/_assets/images/karakuri-robot/karakuri-robot-2.jpg)
 <br/><br/>
-![](/_assets/images/karakuri-robot/karakuri-robot-3.png)
+![](/_assets/images/karakuri-robot/karakuri-robot-3.jpg)
 <br/><br/>
 ![](/_assets/images/karakuri-robot/moving-karakuri-robot.gif)
 <br/><br/>
