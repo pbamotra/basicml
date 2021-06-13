@@ -16,6 +16,7 @@ include: ["_assets", "_posts", "_pages", "_artworks", "_logs", "second-brain"]
 social:
   github: pbamotra
   medium: pbamotra
+  twitter: _pbamotra_
 
 avatar: "_assets/pankesh-style-cpng.png"
 disqus_short_name : 
