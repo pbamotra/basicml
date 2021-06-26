@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `second-brain`,
+  pathPrefix: `notes`,
   siteMetadata: {
     title: 'Pankesh Bamotra'
   },
