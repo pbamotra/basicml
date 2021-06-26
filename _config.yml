@@ -11,7 +11,7 @@ relative_permalinks: false
 
 keywords: tutorial, machine learning, python, deep learning, computer vision, मशीन लर्निंग, natural language processing, 深度 学习, 自然 语言 处理, artificial intelligence
 
-include: ["_assets", "_posts", "_pages", "_artworks", "_logs", "second-brain"]
+include: ["_assets", "_posts", "_pages", "_artworks", "_logs", "notes"]
 
 social:
   github: pbamotra
