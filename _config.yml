@@ -18,7 +18,7 @@ social:
   medium: pbamotra
   twitter: _pbamotra_
 
-avatar: "_assets/pankesh-style-cpng.png"
+avatar: "_assets/pankesh-style-cpng.jpg"
 disqus_short_name : 
 
 contacts:
@@ -39,7 +39,6 @@ tags: tutorial, machine learning, python, deep learning, computer vision, मश
 
 # Build settings
 markdown: kramdown
-theme: minima
 
 plugins:
   - jekyll-paginate
