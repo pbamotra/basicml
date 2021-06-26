@@ -34,7 +34,7 @@ title: Table of Contents
 
 	<div>
 	{% for post in site.posts %}
-		<h5><i>{{ post.date | date_to_long_string }}</i> </h5>
+		<!-- <h5><i>{{ post.date | date_to_long_string }}</i> </h5> -->
 		<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
 	{% endfor %}
 

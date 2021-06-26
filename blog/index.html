@@ -17,7 +17,8 @@ title: Posts
     {% for post in posts %}
       <li>
         {% if post.sticky == null %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="post-meta"></span>
+          <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
         {% else %}
           <span class="post-meta">Pinned</span>
         {% endif %}
