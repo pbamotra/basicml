@@ -1,0 +1,29 @@
+---
+permalink: /projects/
+categories: pages
+layout: page
+title: Projects
+---
+<div class="grid">
+
+	{% for project in site.pages %}
+		{% if project.layout contains 'project'%}
+
+		<article role="article" class="card">
+			<div class="meta">
+			{% if project.projecturl %}
+			<h2><a href="{{ site.baseurl }}{{ project.projecturl }}" target="_blank">
+			{% else %}
+			<h2><a href="{{ site.baseurl }}{{ project.url }}"></a>
+			{% endif %}
+			{{ project.title }}
+			</a></h2>
+			<p>{{ project.summary }}</p>
+			<time class="date" datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: "%Y" }} &middot; {{ project.category }}</time>
+			</div>
+		</article>
+		{% endif %}
+	{% endfor %}
+	
+  </div>
+  
