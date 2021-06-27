@@ -8,7 +8,7 @@ title: Books / Career /
          height="60%"
          width="60%"/>
   </div>
-  <div style="margin-left: 1em; text-align: center">
+  <div style="text-align: center">
     <span>
         <h3>What I Wish I Knew When I Was 20</h3>
         <span><i>Tina Seelig</i></span>

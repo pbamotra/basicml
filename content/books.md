@@ -10,7 +10,7 @@ title: Books
              alt="What I Wish I Knew When I Was 20 book cover"/>
     </a> 
   </div>
-  <div style="margin-left: 1em; text-align: center">
+  <div style="text-align: center">
     <span>
         <h3>
             <a href="/what-i-wish-i-knew-when-i-was-20">What I Wish I Knew When I Was 20</a>
