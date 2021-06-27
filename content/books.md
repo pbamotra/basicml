@@ -21,5 +21,5 @@ title: Books
 </table>
 
 ## Genres
-- [[Entrepreneurship]]
+- [[Career]]
 - [[Religion]]
