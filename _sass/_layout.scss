@@ -330,9 +330,6 @@
 /* Sidenotes, margin notes, figures, captions */
 img { max-width: 100%; }
 
-a.footnote {
-
-}
 
 div.footnotes {
   font-size: $base-font-size *0.7;
@@ -397,7 +394,7 @@ div.footnotes {
  */
 .site-footer {
     font-size: $small-font-size;
-    text-color: $grey-color;
+    color: $grey-color;
 }
 
 .footer-heading {
