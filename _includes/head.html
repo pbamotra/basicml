@@ -16,6 +16,9 @@
   <meta name="citation_pdf_url" content="{{ page.pdf }}"> {% endif %}
   <link rel="stylesheet" href="/_assets/et-book/et-book.css">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  {% if page.islucid %}
+  <link rel="stylesheet" href="{{ "/css/pylit.css" | prepend: site.baseurl }}">
+  {% endif %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all';this.onload=null;" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" ></noscript> 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -29,7 +32,7 @@
       }
     </style>
 
-      <script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
       imageFont: null,
       extensions: ["tex2jax.js"],
@@ -39,9 +42,8 @@
       });
       </script>
 
-      <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-      </script>
-
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
   <!--
     - Dynamically set liquid variables for working with URLs/paths
     -->
