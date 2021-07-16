@@ -9,8 +9,8 @@ These notes are a [ditigal garden<sup style="font-size:8px">&#x2197;</sup>](http
 
 ## Index
 - [[Books]]
-- [[Reading]]
-- [[Research]]
-- [[Programming]]
+<!-- - [[Reading]] -->
+<!-- - [[Research]] -->
+<!-- - [[Programming]] -->
 - [[Life]]
-- [[Health]]
+<!-- - [[Health]] -->
