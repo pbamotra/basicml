@@ -168,11 +168,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $anchor-visited;
     }
 
     &:hover {
-        color: $text-color;
+        color: $anchor-hover;
         text-decoration: underline;
     }
 }

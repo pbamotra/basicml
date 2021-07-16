@@ -59,7 +59,7 @@ div.section:hover div.docs .section-link a {
   opacity: 1;
 }
 div.section:hover div.code {
-  background: #whitesmoke;
+  background: whitesmoke;
 }
 div.section div.docs {
   box-sizing: border-box;
