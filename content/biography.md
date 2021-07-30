@@ -1,5 +1,5 @@
 ---
-title: Books / Career
+title: Books / Biography
 ---
 
 - [[Shoe dog]] by Phil Knight
