@@ -1,5 +1,5 @@
 ---
-title: Books
+title: Books / Career
 ---
 
 ## Currently reading
@@ -15,4 +15,5 @@ title: Books
 ## Genres
 - [[Career]]
 - [[Leadership]]
-- [[Religion]]
+- [[Biography]]
+- [[Self help]]

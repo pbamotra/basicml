@@ -13,4 +13,4 @@ These notes are a [ditigal garden<sup style="font-size:8px">&#x2197;</sup>](http
 <!-- - [[Research]] -->
 <!-- - [[Programming]] -->
 - [[Life]]
-<!-- - [[Health]] -->
+- [[Vernacular thoughts]]
