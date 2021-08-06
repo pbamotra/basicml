@@ -14,7 +14,7 @@ date: 31-07-2021
 image: /_assets/images/cyborgabbit/3.jpg
 ---
 ![](/_assets/images/cyborgabbit/1.jpg)
-<br/></br/>
+<br/><br/>
 ![](/_assets/images/cyborgabbit/2.jpg)
 <br/><br/>
 ![](/_assets/images/cyborgabbit/3.jpg)
