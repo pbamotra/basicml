@@ -28,7 +28,7 @@ contacts:
     address2:
     street:
     zip:
-    city: Redmond, Washington
+    city:
     country: USA
   phone:
   pubkey:
