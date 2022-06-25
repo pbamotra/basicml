@@ -1,6 +1,9 @@
 .bundle
 .sass-cache
 Gemfile.lock
+yarn.lock
+package-lock.json
+public
 _site
 *.gem
 .DS_Store

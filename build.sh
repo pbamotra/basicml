@@ -1,4 +1,6 @@
 #!/bin/bash
+echo 'Cleaning node_modules and lock files'
+rm -rf node_modules yarn.lock package-lock.json Gemfile.lock
 
 echo '1/4 Installing yarn dependencies'
 yarn add gatsby react react-dom
