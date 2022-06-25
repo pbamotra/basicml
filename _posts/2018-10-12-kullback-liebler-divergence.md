@@ -8,7 +8,9 @@ cover_art: url(/_assets/imgs/kldivergence.jpg) no-repeat right
 cover_art_size: 100%
 cover_attribution: flickr.com/photos/shonk
 ---
-
+<h4>Contents</h4>
+* TOC
+{:toc}
 KL divergence is a [premetric](https://en.wikipedia.org/wiki/Metric_(mathematics)#Premetrics) that finds its root in information theory. It has a close relationship with [Shannon entropy](https://en.wiktionary.org/wiki/Shannon_entropy) and we'll walk through this relationship in the subsequent discussion. In its most basic sense, KL divergence measures the proximity between distributions. When we talk about KL divergence between two distribution say P and Q, it's denoted as
 
 $$D_{KL} \left(P  \Vert  Q\right)$$

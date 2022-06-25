@@ -8,6 +8,9 @@ cover_art: url(/_assets/imgs/icons8/flamenco/flamenco-searching.png) no-repeat r
 cover_art_size: 100%
 cover_attribution: icons8.com/ouch
 ---
+<h4>Contents</h4>
+* TOC
+{:toc}
 <p>
 This article is about the Expectation Maximization algorithm and the guarantees it offers for certain kind of optimization problems. We'll walk through the gory mathematical details and work out some examples that involve EM. In this article, we assume that you're familier with maximum likelihood estimation.
 </p>
