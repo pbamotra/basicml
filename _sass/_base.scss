@@ -43,7 +43,9 @@ body {
     font-weight: 300;
     color: $text-color;
     box-sizing: content-box;
-
+    border-top: 10px solid #fec444;
+    background-color: white;
+    
     -webkit-text-size-adjust: 100%;
     /*background-color: $background-color;*/
 
